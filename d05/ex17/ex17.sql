@@ -1,5 +1,5 @@
-SELECT COUNT(/* PLACEHOLDER FOR SUBSCRIPTION NUMBER */) AS 'nb_susc', ROUND(AVG(/* PLACEHOLDER FOR AVERAGE SUBSRIPTION PRICE */)) AS 'av_susc', MOD(SUM(/* PLACEHOLDER FOR AVERAGE SUBSRIPTION DURATION */), 42) AS 'ft'
-FROM /* LITERALLY NO IDEA WHERE FROM BEACUSE FREAKIN RESOURCES NOT AVAILABLE */;
+SELECT COUNT(id_sub) AS 'nb_susc', ROUND(AVG(price)) AS 'av_susc', MOD(SUM(duration_sub), 42) AS 'ft'
+FROM subscription;
 
 
 Display the number of offered subscription in a column named nb_susc,

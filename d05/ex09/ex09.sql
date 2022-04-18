@@ -1,3 +1,3 @@
 SELECT COUNT(*) AS 'nb_short-films'
 FROM film
-WHERE /* PLACEHOLDER FOR THE LEN OF THE FILM */ <= 42;
+WHERE duration <= 42;

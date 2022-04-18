@@ -1,8 +1,10 @@
 SELECT UPPER(last_name) AS 'NAME', first_name, price
-FROM /* LITERALLY NO IDEA WHERE FROM BEACUSE FREAKIN RESOURCES NOT AVAILABLE */
-/* POSSIBLY INNER JOIN IF TWO TABLES */
-/* POSSIBLY ON IF TWO TABLES table1.column_name = table2.column_name; */
-WHERE /* PLACEHOLDER FOR THE SUBSCRIPTION PRICE */ > 42
+FROM user_card
+INNER JOIN member
+ON user_card.id_user = member.id_user_card
+INNER JOIN subscription
+ON member.id_sub = subscription.id_sub
+WHERE price > 42
 ORDER BY last_name, first_name;
 
 

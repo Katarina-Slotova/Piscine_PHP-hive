@@ -1,7 +1,5 @@
 SELECT last_name, first_name
-FROM /* LITERALLY NO IDEA WHERE FROM BEACUSE FREAKIN RESOURCES NOT AVAILABLE */
-/* POSSIBLY INNER JOIN IF TWO TABLES */
-/* POSSIBLY ON IF TWO TABLES table1.column_name = table2.column_name; */
+FROM user_card
 WHERE last_name LIKE '%-%' OR first_name LIKE '%-%'
 ORDER BY last_name, first_name;
 
