@@ -1,3 +1,4 @@
+USE db_kslotova;
 CREATE TABLE ft_table (
 	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	`login` varchar(8) DEFAULT 'toto' NOT NULL,

@@ -1,3 +1,4 @@
+USE db_kslotova;
 SELECT title AS 'Title', summary AS 'Summary', prod_year
 FROM film
 INNER JOIN genre

@@ -1,4 +1,5 @@
-SELECT DATEDIFF(day, MAX(date), MIN(date)) AS 'uptime'
+USE db_kslotova;
+SELECT DATEDIFF(day, MAX(`date`), MIN(`date`)) AS 'uptime'
 FROM member_history;
 
 
