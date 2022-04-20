@@ -1,4 +1,3 @@
-USE db_kslotova;
 SELECT title, summary
 FROM film
 WHERE LOCATE('vincent', summary)
