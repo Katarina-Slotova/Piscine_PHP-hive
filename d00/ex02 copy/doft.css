@@ -1,0 +1,186 @@
+body {
+	background: rgb(80,80,80);
+}
+
+#top-box {
+	margin: auto;
+	width: 112em;
+	height: 9em;
+	background: #909091;
+	display: flex;
+	flex-direction: row;
+	border-radius: 10px;
+	box-shadow: 0.5em 0.5em 0.5em black;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+#img-42 {
+	margin: 1em 0;
+	width: 29em;
+	left: 21em;
+}
+
+#img-loupe {
+	position: relative;
+	margin-top: 1em;
+	margin-left: 67.5em;
+	bottom: -1em;
+}
+
+#links {
+	margin: 1em 1em 1em 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#img-reload {
+	width: 1.5em;
+	height: 1.5em;
+}
+
+#img-close {
+	width: 1.5em;
+	height: 1.5em;
+}
+
+#left-box {
+	margin-left: 25em;
+	margin-right: 0;
+	width: 9em;
+	height: 32em;
+	background: #909091;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	border-radius: 10px;
+	box-shadow: 0.5em 0.5em 0.5em black;
+	padding-bottom: 1em;
+}
+
+#img-arrow {
+	width: 5em;
+	height: 5em;
+	display: block;
+	margin: 0 2em;
+}
+
+#img-main {
+	width: 5em;
+	height: 5em;
+	display: block;
+	margin: 0 2em;
+}
+
+#img-oeil {
+	width: 5em;
+	height: 5em;
+	display: block;
+	margin: 0 2em;
+	border-style: solid;
+	border-color: red;
+	border-width: 0.3em;
+}
+
+#img-outil {
+	width: 5em;
+	height: 5em;
+	display: block;
+	margin: 0 2em;
+}
+
+#img-chat {
+	width: 5em;
+	height: 5em;
+	display: block;
+	margin: 0 2em;
+}
+
+#center-box {
+	width: 87em;
+	height: 45em;
+	background: #909091;
+	position: absolute;
+	display: block;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 0.5em 0.5em 0.5em black;
+	margin-left: 36em;
+}
+
+#img-cluster {
+	width: 85em;
+	height: 43em;
+	padding: 1em;
+}
+
+#right-box {
+	margin-left: 125em;
+	margin-right: 0;
+	width: 9em;
+	height: 32em;
+	background: #909091;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	border-radius: 10px;
+	box-shadow: 0.5em 0.5em 0.5em black;
+	padding-bottom: 1em;
+}
+
+#img-book {
+	width: 4.5em;
+	height: 6em;
+	display: block;
+	margin: 1em 2em;
+}
+
+#img-towel {
+	width: 5em;
+	height: 4em;
+	display: block;
+	margin: 0 2em;
+	margin-bottom: -1em;
+}
+
+#bricks {
+	background-image: url("./resources/brick.jpg");
+	width: 5vw;
+	height: 5vh;
+	margin: 1em 0.5em;
+}
+
+#response-box {
+	position: absolute;
+	top: 52em;
+	left: 21.5em;
+	background: #86fd84;
+	border-radius: 10px;
+	box-shadow: 0.5em 0.5em 0.5em black;
+	width: 38em;
+	height: 9.5em;
+	padding: 0.5em;
+}
+
+p {
+	margin: 0;
+}
+
+input {
+	width: 33.5em;
+	border-top-color: rgb(245,245,245);
+	border-bottom-color: rgb(232,232,232);
+	border-right-color: rgb(232,232,232);
+	border-left-color: rgb(245,245,245);
+}
+
+button {
+	font-size: 0.9em;
+	background: linear-gradient(#f0f0f0, #dcdcdc);
+	border: solid #9d969d 0.1em;
+	border-radius: 0.2em;
+	height: 1.5em;
+}
