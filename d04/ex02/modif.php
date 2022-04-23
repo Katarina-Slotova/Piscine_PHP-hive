@@ -4,8 +4,8 @@
 if ($_POST['submit'] == "OK" && $_POST['login'] && $_POST['oldpw'] && $_POST['newpw'])
 	{
 		$checker = 0;
-		$filename = '../private/passwd'
-		if (!file_exists($filename)
+		$filename = '../private/passwd';
+		if (!file_exists($filename))
 		{
 			echo("ERROR\n");
 			return ;

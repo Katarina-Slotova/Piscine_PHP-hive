@@ -1,4 +1,3 @@
-#!/opt/homebrew/bin/php
 <?php
 
 	foreach ($_GET as $key=>$value)

@@ -1,17 +1,17 @@
-#!/opt/homebrew/bin/php
 <?php
 
-	if ($_GET[action] == "set")
+	if ($_GET["action"] == "set" && $_GET["name"] != "" && $_GET["value"] != "")
 	{
-		setcookie($_GET[name], $_GET[value], time()); //what about expiry time?
+		setcookie($_GET["name"], $_GET["value"], time() + (86400 * 30));
 	}
-	if ($_GET[action] == "get")
+	if ($_GET["action"] == "get" && $_GET["name"] != "" && !$_GET["value"])
 	{
-		echo($_COOKIE[$_GET[name]."\n"]); //$_COOKIE?
+		print_r("Here");
+		echo($_COOKIE[$_GET["name"]."\n"]);
 	}
-	if ($_GET[action] == "del")
+	if ($_GET["action"] == "del" && $_GET["name"] != "" && !$_GET["value"])
 	{
-		setcookie($_GET[name], NULL, time() - 100);
+		setcookie($_GET["name"], NULL, time() - (86400 * 30));
 	}
 
 ?>

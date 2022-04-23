@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/php
+#!/usr/bin/php
 <?php
 
 	function ft_remove_space($array)

@@ -1,11 +1,11 @@
-#!/opt/homebrew/bin/php
+#!/usr/bin/php
 <?php
 	function ft_remove_space($array)
 	{
 		if ($array != " ")
 			return ($array);
 		else
-			return ;
+			return;
 	}
 
 	function ft_split($str)

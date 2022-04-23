@@ -3,14 +3,14 @@ table {
 	border-style: hidden;
 	display: flex;
 	justify-content: center;
-	padding: 3em;
-	font-size: 1.1em;
+	padding: 1.875vw;
+	font-size: 0.703vw;
 }
 td {
 	text-align: center;
-	width: 3em;
-	height: 2.5em;
-	padding-top: 0.8em;
+	width: 1.875vw;
+	height: 1.719vw;
+	padding-top: 0.547vw;
 	padding-bottom: 0;
 }
 img {
@@ -23,21 +23,21 @@ img {
 }
 .number {
 	float: left;
-	font-size: 10px;
-	padding-top: 1em;
+	font-size: 0.391vw;
+	padding-top: 0.430vw;
 }
 .weight {
 	float: right;
-	font-size: 10px;
-	padding-top: 1em;
+	font-size: 0.391vw;
+	padding-top: 0.430vw;
 }
 .border_num_up {
-	font-size: 10px;
+	font-size: 0.391vw;
 }
 .border_num_side {
-	font-size: 10px;
+	font-size: 0.391vw;
 	text-align: right;
-	padding-right: 1em;
+	padding-right: 0.625vw;
 }
 .nonmetals {
 	background: rgb(126, 101, 126);

@@ -1,11 +1,11 @@
-#!/opt/homebrew/bin/php
 <?php
+
 	function ft_remove_space($array)
 	{
 		if ($array != " ")
 			return ($array);
 		else
-			return ;
+			return;
 	}
 
 	function ft_split($str)
@@ -15,4 +15,5 @@
 		sort($cleaned_array);
 		return ($cleaned_array);
 	}
+
 ?>

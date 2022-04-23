@@ -1,8 +1,8 @@
-#!/opt/homebrew/bin/php 
+#!/usr/bin/php
 <?php
 
 $count = 0;
-while ($count < 100)
+while ($count < 1000)
 {
 	echo ("X");
 	$count++;

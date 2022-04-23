@@ -6,7 +6,7 @@ class UnholyFactory
 	
 	public function absorb($absorbThisFighter)
 	{
-		if (is_subclass_of($absorbThisFighter, "Fighter"))
+		if ($absorbThisFighter instanceof Fighter)
 		{
 			if (in_array($absorbThisFighter, $this->fighterCollection))
 				printf("(Factory already absorbed a fighter of type %s)" . PHP_EOL, $absorbThisFighter->createdFighter);

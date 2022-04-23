@@ -4,9 +4,9 @@
 	{
 		public function sleepWith($person)
 		{
-			if (get_class($person) === "Cersei")
+			if ($person instanceof Cersei)
 				printf("With pleasure, but only in a tower in Winterfell, then." . PHP_EOL);
-			else if (get_class($person) === "Tyrion")
+			else if ($person instanceof Tyrion)
 				printf("Not even if I'm drunk !" . PHP_EOL);
 			else
 				printf("Let's do this." . PHP_EOL);

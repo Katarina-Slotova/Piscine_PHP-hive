@@ -1,11 +1,10 @@
-#!/opt/homebrew/bin/php
 <?php
 
 	session_start();
-	if ($_GET[submit] == "OK")
+	if ($_GET["submit"] == "OK")
 	{
 		$_SESSION["login"] = $_GET["login"];
-		$_SESSION["passwd"] = $GET_["passwd"};
+		$_SESSION["passwd"] = $GET_["passwd"];
 	}
 
 ?>
@@ -13,10 +12,10 @@
 <html>
 	<body>
 		<form name="index.php" method="GET">
-			Username: <input name="login" value="<?php echo $_SESSION["login"]?>"/>
+			Username: <input type="text" name="login" value="<?php echo $_SESSION["login"]?>"/>
 			<br/>
-			Password: <input name="passwd" value="<?php echo $_SESSION["passwd"]?>"/>
-			<input type="submit" name="submit" value="OK">
+			Password: <input type="password" name="passwd" value="<?php echo $_SESSION["passwd"]?>"/>
+			<input type="submit" name="submit" value="OK"/>
 		</form>
 	</body>
 </html>

@@ -157,7 +157,7 @@ body {
 	position: absolute;
 	top: 52em;
 	left: 21.5em;
-	background: #8bff89;
+	background: #86fd84;
 	border-radius: 10px;
 	box-shadow: 0.5em 0.5em 0.5em black;
 	width: 38em;
@@ -180,7 +180,11 @@ input {
 button {
 	font-size: 0.9em;
 	background: linear-gradient(#f0f0f0, #dcdcdc);
-	border: solid #9d969d 1px;
-	border-radius: 2px;
+	border: solid #9d969d 0.1em;
+	border-radius: 0.2em;
 	height: 1.5em;
+}
+
+button:active {
+	background: linear-gradient(#e1e1e1, #dcdcdc);
 }

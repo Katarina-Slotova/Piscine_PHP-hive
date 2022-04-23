@@ -1,6 +1,6 @@
-#!/opt/homebrew/bin/php 
+#!/usr/bin/php
 <?php
 
-echo ("Hello World!\n");
+	echo ("Hello World!\n");
 
 ?>

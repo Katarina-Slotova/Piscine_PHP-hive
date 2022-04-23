@@ -1,32 +1,27 @@
-#!/opt/homebrew/bin/php 
+#!/usr/bin/php
 <?php
 
-$data = fopen('php://stdin', 'r');
-while (!feof($data))
-{
-	echo ("Enter a number: ");
-	$number = fgets($data);
-	$number = trim($number, "\n");
-/* 	if (feof($data))
+	$data = fopen('php://stdin', 'r');
+	while (!feof($data))
 	{
-		echo("\n");
-		exit();
-	} */
-	if ($number)
-	{
-		if (is_numeric($number))
+		echo ("Enter a number: ");
+		$number = fgets($data);
+		if ($number)
 		{
-			if ($number % 2 == 0)
-				echo ("Number ".$number." is even.");
+			$number = trim($number, "\n");
+			if (is_numeric($number))
+			{
+				if ($number % 2 == 0)
+					echo ("The number ".$number." is even");
+				else
+					echo ("The number ".$number." is odd");
+			}
 			else
-				echo ("Number ".$number." is odd.");
+				echo ("'".$number."'"." is not a number");
+			echo ("\n");
 		}
-		else
-			echo ("Number ".$number." is not a number.");
-		echo ("\n");
 	}
-}
-echo ("\n");
-fclose($data);
+	echo ("\n");
+	fclose($data);
 
 ?>

@@ -6,7 +6,7 @@
 
 		public function recruit($addWatcher)
 		{
-			if (is_subclass_of($addWatcher, "IFighter"))
+			if ($addWatcher instanceof IFighter)
 				$this->wallWatchers[] = $addWatcher;
 		}
 
