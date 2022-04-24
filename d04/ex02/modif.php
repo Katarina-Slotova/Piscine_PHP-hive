@@ -1,45 +1,26 @@
-#!/opt/homebrew/bin/php
 <?php
 
-if ($_POST['submit'] == "OK" && $_POST['login'] && $_POST['oldpw'] && $_POST['newpw'])
+	if ($_POST["login"] && $_POST["oldpw"] && $_POST["newpw"] && $_POST["submit"] == "OK")
 	{
+		$data = unserialize(file_get_contents("../private/passwd"));
 		$checker = 0;
-		$filename = '../private/passwd';
-		if (!file_exists($filename))
+		foreach ($data as $key => $user)
 		{
-			echo("ERROR\n");
-			return ;
-		}
-		$data = unserialize(file_get_contents($filename));
-		foreach ($data as $user)
-		{
-			if ($user['login'] === $_POST['login'])
+			if ($user["login"] === $_POST["login"] && $user["passwd"] === hash("whirlpool", $_POST["oldpw"]))
 			{
-				if ($user['passwd'] === hash($_POST['oldpw'])) // add hashing algo ....
-				{
-					$user['passwd'] = hash($_POST["newpw"]); // add hashing algo ....
-					$checker = 1;
-				}
-				else
-				{
-					echo("ERROR\n");
-					return ;
-				}
+				$checker = 1;
+				$data[$key]["passwd"] = hash("whirlpool", $_POST["newpw"]);
 			}
 		}
-		if ($checker === 0)
+		if ($checker)
 		{
-			echo("ERROR\n");
-			return ;
+			file_put_contents("../private/passwd", serialize($data));
+			echo "OK\n";
 		}
-		file_put_contents($filename, serialize($data));
-		echo("OK\n");
+		else
+			echo "ERROR\n";;
 	}
 	else
-	{
-		echo("ERROR\n");
-		return ;
-	}
-
+		echo "ERROR\n";
 
 ?>
