@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			#balloon {
+				height: 200px;
+				width: 200px;
+				background-color: red;
+				border-radius: 100%;
+				margin: auto;
+				margin-top: 300px;
+				cursor: copy;
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="balloon"></div>
+		<script>
+			var elem = $("#balloon");
+			const colors = ["red", "green", "blue"];
+			var num_of_clicks = 0;
+			var clickChecker = 0;
+
+			elem.click(function()
+			{
+				clickChecker = 1;
+				num_of_clicks++;
+				if (num_of_clicks > 2)
+					num_of_clicks = 0;
+				elem.css("background-color", colors[num_of_clicks]);
+				if (elem.height() < 420)
+				{
+					elem.height(elem.height() + 10 + "px");
+					elem.width(elem.width() + 10 + "px");
+				}
+				else
+				{
+					elem.height(200 + "px");
+					elem.width(200 + "px");
+				}
+			});
+
+			elem.mouseleave(function()
+			{
+				if (elem.height() > 200 && clickChecker == 0)
+				{
+					num_of_clicks--;
+					if (num_of_clicks < 0)
+						num_of_clicks = 2;
+					elem.css("background-color", colors[num_of_clicks]);
+					elem.height(elem.height() - 5 + "px");
+					elem.width(elem.width() - 5 + "px");
+				}
+				clickChecker = 0;
+			});
+		</script>
+	</body>
+</html>

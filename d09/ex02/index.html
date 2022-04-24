@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body {
+				background-color: #FFEEEE;
+			}
+
+			h1 {
+				color: #F190B7;
+				text-align: center;
+				margin: 4vw auto 0;
+				font-size: 2vw;
+				text-decoration: underline;
+				width: 40%;
+			}
+
+			.submit {
+				position: absolute;
+				margin-left: 75vw;
+				padding: 0 1vw;
+				
+				font-size: 1.5vw;
+				border-radius: 30%;
+				width: 6vw;
+				height: 3vw;
+			}
+
+			.submit:hover {
+				background-color: lightsalmon;
+				cursor: copy;
+			}
+
+			img {
+				position: absolute;
+				transform: rotate(-15deg);
+				width: 20%;
+				margin-left: 2vw;
+				border-radius: 20%;
+			}
+
+			#ft_list {
+				text-align: center;
+			}
+
+			.item{
+				list-style:none;
+				font-family:Georgia, 'Times New Roman', Times, serif;
+				font-size: 0.8vw;
+				padding: 0.5vw 0;
+			}
+			</style>
+		<script src="todo.js"></script>
+	</head>
+	<body>
+		<button onclick="showPrompt()" class="submit" type="submit" name="submit">New</button>
+		<h1>Rememberall 2.0</h1>
+		<img src="https://www.thelist.com/img/gallery/the-actor-who-played-neville-longbottom-grew-up-to-be-gorgeous/leeding-the-pack-1543958372.jpg" alt="neville-rememberall">
+		<div>
+			<div id="ft_list"></div>
+		</div>
+	</body>
+</html>

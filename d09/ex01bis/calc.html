@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body {
+				background-color: #FFEEEE;
+			}
+
+			h1 {
+				color: #F190B7;
+				text-align: center;
+				margin: 4vw auto;
+				font-size: 2vw;
+				text-decoration: underline;
+			}
+
+			form {
+				background-color: #F7E9D7;
+				text-align: center;
+				margin: 10vw auto 20vw auto;
+				width: 50vw;
+				height: 10vw;
+				padding-top: 2vw;
+				border-style: solid;
+			}
+
+			input {
+				background-color: #FFF6EA;
+				width: 15vw;
+				height: 1.3vw;
+				margin: 1.5vw;
+				border-color: darkgrey;
+				box-shadow: 0.1vw 0.1vw 0.1vw grey;
+				background: linear-gradient(#FFEEEE, #EBD8C3);
+			}
+
+			select {
+				background-color: #FFF6EA;
+				width: 2vw;
+				height: 1.3vw;
+				margin: 1.5vw;
+				border-color: darkgrey;
+				box-shadow: 0.1vw 0.1vw 0.1vw grey;
+				background: linear-gradient(#FFEEEE, #EBD8C3);
+			}
+
+			.submit {
+				border-radius: 50px;
+				width: 10vw;
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<h1>Welcome to Computus Totalus!</h1>
+		<form>
+			<input type="text" name="left-member" id="left-member">
+			<select id="operator">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>
+			<input type="text" name="right-member" id="right-member">
+			<br>
+			<input class="submit" type="submit" name="submit" value="Try me!">
+		</form>
+	</body>
+	<script>
+		setInterval(function()
+		{
+			alert("Please, use me...")
+		}, 30000);
+
+		var left_member = $("#left-member");
+		var right_member = $("#right-member");
+
+		function isInt(n)
+		{
+			return n % 1 === 0;
+		}
+		
+		function calculate()
+		{
+			var operator = $("#operator");
+			var operatorVal = operator.val();
+			var result;
+			if (parseInt(left_member.val()) >= 0 && parseInt(right_member.val()) >= 0 && isInt(left_member.val()) && isInt(right_member.val()))
+			{
+				if (operatorVal === "+")
+					result = parseInt(left_member.val()) + parseInt(right_member.val());
+				else if (operatorVal === "-")
+					result = parseInt(left_member.val()) - parseInt(right_member.val());
+				else if (operatorVal === "*")
+					result = parseInt(left_member.val()) * parseInt(right_member.val());
+				else if (operatorVal === "/")
+				{
+					if (parseInt(right_member.val()) === 0)
+						result = "It's over 9000!";
+					else
+						result = parseInt(left_member.val()) / parseInt(right_member.val());
+				}
+				else if (operatorVal === "%")
+				{
+					if (parseInt(right_member.val()) === 0)
+						result = "It's over 9000!";
+					else
+						result = parseInt(left_member.val()) % parseInt(right_member.val());
+				}
+				alert(result);
+				console.log(result);
+			}
+			else
+			{
+				alert("Error :(");
+				console.log("Error :(");
+			}
+		}
+
+		$("input[name=submit]").click(calculate);
+		
+	</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			#balloon {
+				height: 200px;
+				width: 200px;
+				background-color: red;
+				border-radius: 100%;
+				margin: auto;
+				margin-top: 300px;
+				cursor: copy;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="balloon"></div>
+		<script>
+			var elem = document.getElementById("balloon");
+			const colors = ["red", "green", "blue"];
+			var num_of_clicks = 0;
+			var clickChecker = 0;
+
+			elem.addEventListener("click", function()
+			{
+				var height = elem.offsetHeight;
+				var width = elem.offsetWidth;
+				clickChecker = 1;
+				num_of_clicks++;
+				if (num_of_clicks > 2)
+					num_of_clicks = 0;
+				elem.style.backgroundColor = colors[num_of_clicks];
+				if (height < 420)
+				{
+					elem.style.height = height + 10 + "px";
+					elem.style.width = width + 10 + "px";
+				}
+				else
+				{
+					elem.style.height = 200 + "px";
+					elem.style.width = 200 + "px";
+				}
+			});
+
+			elem.addEventListener("mouseleave", function()
+			{
+				var height = elem.offsetHeight;
+				var width = elem.offsetWidth;
+				if (height > 200 && clickChecker == 0)
+				{
+					num_of_clicks--;
+					if (num_of_clicks < 0)
+						num_of_clicks = 2;
+					elem.style.backgroundColor = colors[num_of_clicks];
+					elem.style.height = height - 5 + "px";
+					elem.style.width = width - 5 + "px";
+				}
+				clickChecker = 0;
+			});
+		</script>
+	</body>
+</html>
